@@ -13,21 +13,31 @@ void setup() {
 }
 
 void draw() { 
-  fill(beige);
-  strokeWeight(2);
-  rect(150,250,300,250);
-  fill(red);
-  triangle(130,250,470,250,300,80);
-  fill(brown);
-  rect(250,350,100,150);
-  fill(black);
-  circle(270,440,10);
+  background(250);
+  house(300,300,1); 
+  house(0,0,1);
+  house(100,100,0.25);
+  house(200,300, 2);
 }
 
-void house(int x,int y) {
+void house(int x,int y,float s) {
   pushMatrix();
   translate(x,y);
-  
+  scale(s);
+  //rotate(
+  home();
   
   popMatrix();
+}
+
+void home() {
+  fill(beige);
+  strokeWeight(2);
+  rect(0,0,300,250);
+  fill(red);
+  triangle(-20,0,320,0,150,-170);
+  fill(brown);
+  rect(100,100,100,150);
+  fill(black);
+  circle(130,190,10);
 }
