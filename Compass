@@ -1,0 +1,30 @@
+size(600, 600);
+
+translate(300, 300);
+circle(0, 0, 20);
+
+int n = 10;
+int m = 2;
+
+int count = 0;
+while (count < n) {
+
+  line(0, 0, 100, 0);
+
+
+  rotate( radians(360.0/n) );
+
+
+  count = count + 1;
+}
+
+while (count < m) {
+
+  line(0, 0, 120, 0);
+
+
+  rotate( radians(360.0/n) );
+
+
+  count = count + 1;
+}
